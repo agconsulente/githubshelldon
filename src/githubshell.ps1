@@ -20,6 +20,12 @@ function CreateLocalGitRepo{
 
 }
 
+function PublishGitRepo{
+    param(
+
+    )
+}
+
 
 
 function Menu
@@ -41,24 +47,26 @@ function Menu
          #>
 
          switch($userChoice){
-            case 1:
-             # ...
-            case 2:
-             # ...
-             case 3:
-             # ...
-             case 9:
-                $isItRunning = $false;
-             default:
-                Write-Host "Scelta non valida; Riprovare usando i comandi del menù." -foregroundColor Red;
+            1:
+            { # ... 
+                }
+            2:
+            { # ... 
+                }
+            3:
+            { # ... 
+                }
+            9:
+            {$isItRunning = $false;}
+             Default
+               { Write-Host "Scelta non valida; Riprovare usando i comandi del menù." -foregroundColor Red;}
          }
     }
-} 
+}
 
 function GithubSHell{
     [CmdletBinding()]
     param(
-
     )
     Menu
     Exit
